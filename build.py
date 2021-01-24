@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 
 import os
+import re
 
 main_py = "main.py"
 main_js = "main.js"
 # check stubs import
-stubs_code = "from stubs import *"
+stubs_import_regex = "from stubs import .*"
 main_py_dode = open(main_py, 'r').read()
 stubs_included = False
-if main_py_dode.find(stubs_code) >= 0:
+if main_py_dode.find("from stubs import") >= 0:
     print("Begin to replace code")
     stubs_included = True
-    plainCode = main_py_dode.replace(stubs_code, "")
+    plainCode = re.sub(main_py_dode, "", main_py_dode)
     main_py_file = open(main_py, "w")
     main_py_file.write(plainCode)
     main_py_file.close()
