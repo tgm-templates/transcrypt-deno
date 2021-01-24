@@ -3,6 +3,7 @@
 import os
 
 main_py = "main.py"
+main_js = "main.js"
 # check stubs import
 stubs_code = "from stubs import *"
 main_py_dode = open(main_py, 'r').read()
@@ -19,13 +20,13 @@ if main_py_dode.find(stubs_code) >= 0:
 print("Execute transcrypt compile\n")
 os.system('transcrypt --build ' + main_py)
 
-if os.path.isfile("global.js"):
-    print("Merge with global.js\n")
-    # merge global.js with
-    global_js_code = open('global.js', 'r').read()
-    main_js_code = open('__target__/main.js', 'r').read()
+if os.path.isfile("deps.js"):
+    print("Merge with deps.js\n")
+    # merge deps.js with
+    global_js_code = open('deps.js', 'r').read()
+    main_js_code = open('__target__/' + main_js, 'r').read()
     # write new content
-    main_js_file = open("__target__/main.js", "w")
+    main_js_file = open("__target__/" + main_js, "w")
     main_js_file.write(global_js_code + main_js_code)
     main_js_file.close()
 
