@@ -32,3 +32,11 @@ class JSON:
     def stringify(cls, obj):
         return "{}"
 
+
+# Lodash
+class Lodash:
+    def camelCase(self, text):
+        return ""
+
+
+lodash = Lodash()
