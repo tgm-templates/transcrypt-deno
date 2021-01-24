@@ -23,12 +23,12 @@ def fetch(url):
     return Response()
 
 
-class JSONClass:
-    def parse(self, text):
+class JSON:
+    @classmethod
+    def parse(cls, text):
         return {}
 
-    def stringify(self, obj):
+    @classmethod
+    def stringify(cls, obj):
         return "{}"
 
-
-JSON = JSONClass()
