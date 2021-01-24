@@ -1,3 +1,11 @@
+def __pragma__(*args):
+    return ""
+
+
+def __include__(file_name) -> str:
+    return ""
+
+
 # stubs for main.py
 class DenoNameSpace:
     env: dict = {}
