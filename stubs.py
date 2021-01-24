@@ -1,8 +1,4 @@
-def __pragma__(*args):
-    return ""
-
-
-def __include__(file_name) -> str:
+def __pragma__(directive: str, *args) -> str:
     return ""
 
 
