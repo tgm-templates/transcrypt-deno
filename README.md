@@ -6,7 +6,7 @@ Transcrypt Deno
 * main.py: main Python to be compiled into JavaScript
 * mod.js: module's mod.js
 * stubs.py: stubs API for main.py
-* global.js: global imports for main.py
+* deps.js: third-party Javascript libraries for main.py
 * build.py:  build script to compile Python into JavaScript
 
 # Requirements
