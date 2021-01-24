@@ -1,6 +1,6 @@
 # stubs for main.py
 class DenoNameSpace:
-    env: {}
+    env = {}
 
     def readTextFileSync(self, name):
         return ""
