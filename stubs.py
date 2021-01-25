@@ -20,6 +20,9 @@ Deno = DenoNameSpace()
 class Response:
     status = 200
 
+    def __init__(self, body, headers: dict) -> None:
+        pass
+
     async def json(self) -> dict:
         return {}
 
