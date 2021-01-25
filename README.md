@@ -4,7 +4,7 @@ Transcrypt Deno
 # Project structure
 
 * main.py: main Python to be compiled into JavaScript
-* mod.js: module's mod.js
+* mod.ts: module's mod.ts, wrapper js function with TypeScript to supply typing support
 * stubs.py: stubs API for main.py
 * deps.js: third-party Javascript libraries for main.py
 * build.py:  build script to compile Python into JavaScript
