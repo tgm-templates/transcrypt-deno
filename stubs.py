@@ -2,6 +2,10 @@ def __pragma__(directive: str, *args) -> str:
     return ""
 
 
+def __new__(obj):
+    return obj
+
+
 # stubs for main.py
 class DenoNameSpace:
     env: dict = {}
