@@ -12,9 +12,9 @@ stubs_included = False
 if main_py_dode.find("from stubs import") >= 0:
     print("Begin to replace code")
     stubs_included = True
-    plainCode = re.sub(main_py_dode, "", main_py_dode)
+    cleaned_code = re.sub(stubs_import_regex, "", main_py_dode)
     main_py_file = open(main_py, "w")
-    main_py_file.write(plainCode)
+    main_py_file.write(cleaned_code)
     main_py_file.close()
 
 # execute transcrypt build
