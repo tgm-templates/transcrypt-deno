@@ -5,6 +5,8 @@ import re
 
 main_py = "main.py"
 main_js = "main.js"
+compile_command = "transcrypt --build " + main_py
+
 # check stubs import
 stubs_import_regex = "from stubs import .*"
 main_py_dode = open(main_py, 'r').read()
@@ -19,7 +21,7 @@ if main_py_dode.find("from stubs import") >= 0:
 
 # execute transcrypt build
 print("Execute transcrypt compile\n")
-os.system('transcrypt --build ' + main_py)
+os.system(compile_command)
 
 if os.path.isfile("deps.js"):
     print("Merge with deps.js\n")
