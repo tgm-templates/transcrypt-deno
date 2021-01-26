@@ -15,9 +15,8 @@ if main_py_dode.find("from stubs import") >= 0:
     print("Begin to replace code")
     stubs_included = True
     cleaned_code = re.sub(stubs_import_regex, "", main_py_dode)
-    main_py_file = open(main_py, "w")
-    main_py_file.write(cleaned_code)
-    main_py_file.close()
+    with open(main_py, "w") as main_py_file:
+        main_py_file.write(cleaned_code)
 
 # execute transcrypt build
 print("Execute transcrypt compile\n")
@@ -29,14 +28,12 @@ if os.path.isfile("deps.js"):
     global_js_code = open('deps.js', 'r').read()
     main_js_code = open('__target__/' + main_js, 'r').read()
     # write new content
-    main_js_file = open("__target__/" + main_js, "w")
-    main_js_file.write(global_js_code + main_js_code)
-    main_js_file.close()
+    with open("__target__/" + main_js, "w") as main_js_file:
+        main_js_file.write(global_js_code + main_js_code)
 
 # write back to main.py
 if stubs_included:
-    main_py_file = open(main_py, "w")
-    main_py_file.write(main_py_dode)
-    main_py_file.close()
+    with open(main_py, "w") as main_py_file:
+        main_py_file.write(main_py_dode)
 
 print("Build done!")
