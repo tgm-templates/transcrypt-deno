@@ -1,3 +1,6 @@
+import json
+
+
 def __pragma__(directive: str, *args) -> str:
     return ""
 
@@ -31,17 +34,17 @@ class Response:
 
 
 def fetch(url) -> Response:
-    return Response()
+    return Response("", {})
 
 
 class JSON:
     @classmethod
     def parse(cls, text) -> dict:
-        return {}
+        return json.loads(text)
 
     @classmethod
     def stringify(cls, obj) -> str:
-        return "{}"
+        return json.dumps(obj)
 
 
 # Lodash
