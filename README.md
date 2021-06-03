@@ -11,7 +11,7 @@ Transcrypt Deno
 
 # Requirements
 
-* Python 3.7
+* Python 3.9
 * Transcript: `pip install transcrypt`
 * Deno
 
