@@ -1,5 +1,5 @@
 from stubs import *
 
 
-def hello(name):
-    return "Hello " + name
+def hello(name: str) -> str:
+    return f"hello {name}"
