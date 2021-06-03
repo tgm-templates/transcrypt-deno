@@ -21,4 +21,4 @@ Transcrypt Deno
 * Transcrypt: https://transcrypt.org/
 * Deno: https://deno.land/
 * Python 3.9 Document: https://docs.python.org/3.9/
-* Python Cheatsheet: https://www.pythoncheatsheet.org/
+* Python Cheatsheet: https://www.pythonsheets.com/ https://www.pythoncheatsheet.org/
